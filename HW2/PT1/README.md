@@ -1,5 +1,4 @@
 Anthony Galbo
-Team 24
 COP 4520 Spring 2022
 
 Programming Assignment 2 Part 1
