@@ -56,7 +56,6 @@ public class BirthdayParty
     // Start the clock.
     long startTime = System.currentTimeMillis();
 
-
     while (inParty)
     {
       while (guestInLabyrinth)
