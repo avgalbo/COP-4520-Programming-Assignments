@@ -22,7 +22,7 @@ Source code name: BirthdayParty.java
 
 Where ```<n>``` is a custom number of guests the user can provide in the command line.
 
-If a user does not provide a number in the command line, the code will default the number of guests to 10.
+If a user does not provide a number in the command line, the program will default the number of guests to 10.
 
 ## Output
 
