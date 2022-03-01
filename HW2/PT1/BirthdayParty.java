@@ -11,7 +11,6 @@ public class BirthdayParty
 {
   public static final int MAX_VALUE = 1;
   public final Semaphore available = new Semaphore(MAX_VALUE, true);
-  public static Thread myThread;
   public boolean cupcake = true;
   public static boolean allGuestsVisited = false;
 
@@ -34,6 +33,7 @@ public class BirthdayParty
   {
     BirthdayParty party = new BirthdayParty();
     Guest guest, getGuest;
+    Thread myThread;
     List<Thread> threadList = new ArrayList<>();
     boolean inParty = true;
     boolean guestInLabyrinth = false;
