@@ -16,19 +16,19 @@ public class Guest implements Runnable, Comparable<Guest>
   private CrystalVase vase;
   private Guest getGuest;
   public State state;
-  public boolean visitedVase;
+  public boolean viewedVase;
   public int guestNum;
   public int numGuests;
-  public int numGuestsVisitedVase;
+  public int numGuestsViewedVase;
 
   public Guest(CrystalVase vase, int guestNum, int numGuests)
   {
     this.vase = vase;
     this.guestNum = guestNum;
     this.numGuests = numGuests;
-    this.numGuestsVisitedVase = 0;
+    this.numGuestsViewedVase = 0;
     this.state = State.ATPARTY;
-    this.visitedVase = false;
+    this.viewedVase = false;
   }
 
   public int compareTo(Guest guest)
@@ -46,9 +46,9 @@ public class Guest implements Runnable, Comparable<Guest>
     this.state = state;
   }
 
-  public void setNumGuestsVisitedVase(int numGuestsVisitedVase)
+  public void setNumGuestsViewedVase(int numGuestsViewedVase)
   {
-    this.numGuestsVisitedVase = numGuestsVisitedVase;
+    this.numGuestsViewedVase = numGuestsViewedVase;
   }
 
   public void run()
@@ -101,10 +101,10 @@ public class Guest implements Runnable, Comparable<Guest>
 
             // If a guest did not view the vase yet, mark visited vase to true
             // Increment the number of guests that visited the vase.
-            if (!visitedVase)
+            if (!viewedVase)
             {
-              visitedVase = true;
-              numGuestsVisitedVase++;
+              viewedVase = true;
+              numGuestsViewedVase++;
             }
 
             // Leave showroom
@@ -112,9 +112,9 @@ public class Guest implements Runnable, Comparable<Guest>
             System.out.println("Guest Number: " + guestNum + " left the showroom");
             vase.available.release();
 
-            if (numGuests == numGuestsVisitedVase)
+            if (numGuests == numGuestsViewedVase)
             {
-              vase.allGuestsVisited = true;
+              vase.allGuestsViewedVase = true;
               System.out.println("All of the guests have visited the showroom!");
             }
             else
@@ -135,7 +135,7 @@ public class Guest implements Runnable, Comparable<Guest>
                 }
               }
 
-              getGuest.setNumGuestsVisitedVase(numGuestsVisitedVase);
+              getGuest.setNumGuestsViewedVase(numGuestsViewedVase);
 
               getGuest.setState(State.INSHOWROOM);
               System.out.println("Guest Number: " + guestNum + " called guest " + getGuest.guestNum + " to enter the showroom");
