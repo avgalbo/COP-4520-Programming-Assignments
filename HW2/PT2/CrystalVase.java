@@ -10,7 +10,7 @@ public class CrystalVase
 {
   public static final int MAX_VALUE = 1;
   public final Semaphore available = new Semaphore(MAX_VALUE, true);
-  public static boolean allGuestsVisited = false;
+  public static boolean allGuestsViewedVase = false;
   public static PriorityBlockingQueue<Guest> myQueue;
 
   public static void main(String [] args) throws InterruptedException
@@ -23,9 +23,20 @@ public class CrystalVase
     boolean guestsInShowroom = false;
     boolean firstGuestInShowroom = false;
     myQueue = new PriorityBlockingQueue<>();
+    int n;
 
     // Allow user to creat custom number of guests.
-    int n = (args.length < 1) ? 10 : Integer.parseInt(args[0]);
+    if (args.length < 1)
+    {
+      System.out.println("\nProgram has defaulted to 10 guests\n");
+      n = 10;
+    }
+    else
+    {
+      n = Integer.parseInt(args[0]);
+    }
+
+    checkUserInput(n);
 
     Guest [] guestList = new Guest[n];
 
@@ -51,14 +62,14 @@ public class CrystalVase
       {
         getGuest = myQueue.remove();
         getGuest.setState(Guest.State.INSHOWROOM);
-        getGuest.setNumGuestsVisitedVase(0);
+        getGuest.setNumGuestsViewedVase(0);
         System.out.println("Guest Number: " + getGuest.guestNum + " has been called to the showroom");
         firstGuestInShowroom = true;
       }
 
       // Case where all the guestList have visited the showroom, if so mark inParty
       // to false and break out of the loop.
-      if (allGuestsVisited)
+      if (allGuestsViewedVase)
       {
         inParty = false;
         break;
@@ -76,5 +87,23 @@ public class CrystalVase
     long endTime = System.currentTimeMillis();
 
     System.out.println("Party Took " + (endTime - startTime) + "ms to finish");
+  }
+
+  public static void checkUserInput(int n)
+  {
+    if (n <= 2)
+    {
+      System.out.println("\nGuest number too low, program has defaulted to 10 guests\n");
+      n = 10;
+    }
+    else if (n > 20)
+    {
+      System.out.println("\nGuest number too high, program has defaulted to 10 guests\n");
+      n = 10;
+    }
+    else
+    {
+      System.out.println("\nYou assigned " + n + " guests to the party\n");
+    }
   }
 }
