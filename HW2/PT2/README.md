@@ -96,4 +96,4 @@ Trial 9 Run recorded at 39ms
 Trial 10 Run recorded at 42ms
 ```
 
-On avg at ```33.7ms``` is a reasonable time for each guest on one thread and only allowing one guest to enter the labyrinth on each permit.  
+On avg at ```33.7ms``` is a reasonable time for each guest on one thread and only allowing one guest to enter the showroom on each permit. Which is a more efficent algorithm than the BirthdayParty algorithm. This is because of the enqueue and dequeue operations that take O(1) runtimes.
