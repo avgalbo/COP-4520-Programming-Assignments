@@ -81,8 +81,9 @@ Before I display the results, This experiment was tested on an Macbook pro intel
 
 Results may differ on machines with different cores.
 
-I tested ten different test runs.
+I tested ten different test runs on the default 10 guests.
 
+```txt
 Trial 1 Run recorded at ```31ms```
 Trial 2 Run recorded at ```25ms```
 Trial 3 Run recorded at ```31ms```
@@ -93,5 +94,6 @@ Trial 7 Run recorded at ```35ms```
 Trial 8 Run recorded at ```26ms```
 Trial 9 Run recorded at ```39ms```
 Trial 10 Run recorded at ```42ms```
+```
 
 On avg at ```33.7ms``` is a reasonable time for each guest on one thread and only allowing one guest to enter the labyrinth on each permit.  
