@@ -3,7 +3,7 @@ COP 4520 Spring 2022
 
 Programming Assignment 2 Part 2
 
-Source code name: BirthdayParty.java
+Source code name: CrystalVase.java
 
 ## Compile and Run Instructions
 
