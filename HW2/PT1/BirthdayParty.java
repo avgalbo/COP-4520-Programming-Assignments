@@ -37,8 +37,20 @@ public class BirthdayParty
     List<Thread> threadList = new ArrayList<>();
     boolean inParty = true;
     boolean guestInLabyrinth = false;
+    int n;
 
-    int n = (args.length < 1) ? 10 : Integer.parseInt(args[0]);
+    // Allow user to creat custom number of guests.
+    if (args.length < 1)
+    {
+      System.out.println("\nProgram has defaulted to 10 guests\n");
+      n = 10;
+    }
+    else
+    {
+      n = Integer.parseInt(args[0]);
+    }
+
+    checkUserInput(n);
 
     Guest [] guestList = new Guest[n];
 
@@ -101,5 +113,23 @@ public class BirthdayParty
     long endTime = System.currentTimeMillis();
 
     System.out.println("Party Took " + (endTime - startTime) + "ms to finish");
+  }
+
+  public static void checkUserInput(int n)
+  {
+    if (n <= 2)
+    {
+      System.out.println("\nGuest number too low, program has defaulted to 10 guests\n");
+      n = 10;
+    }
+    else if (n > 20)
+    {
+      System.out.println("\nGuest number too high, program has defaulted to 10 guests\n");
+      n = 10;
+    }
+    else
+    {
+      System.out.println("\nYou assigned " + n + " guests to the party\n");
+    }
   }
 }
