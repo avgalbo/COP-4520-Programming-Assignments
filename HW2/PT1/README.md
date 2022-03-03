@@ -79,15 +79,17 @@ Results may differ on machines with different cores.
 
 I tested ten different test runs.
 
-Trial 1 Run recorded at ```126ms```
-Trial 2 Run recorded at ```109ms```
-Trial 3 Run recorded at ```109ms```
-Trial 4 Run recorded at ```149ms```
-Trial 5 Run recorded at ```132s```
-Trial 6 Run recorded at ```102ms```
-Trial 7 Run recorded at ```161ms```
-Trial 8 Run recorded at ```129ms```
-Trial 9 Run recorded at ```159ms```
-Trial 10 Run recorded at ```128ms```
+```txt
+Trial 1 Run recorded at 126ms
+Trial 2 Run recorded at 109ms
+Trial 3 Run recorded at 109ms
+Trial 4 Run recorded at 149ms
+Trial 5 Run recorded at 132ms
+Trial 6 Run recorded at 102ms
+Trial 7 Run recorded at 161ms
+Trial 8 Run recorded at 129ms
+Trial 9 Run recorded at 159ms
+Trial 10 Run recorded at 128ms
+```
 
 On avg at ```130.4ms``` is a reasonable time for each guest on one thread and only allowing one guest to enter the labyrinth on each permit.  
