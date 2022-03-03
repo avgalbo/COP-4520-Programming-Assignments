@@ -28,6 +28,26 @@ If a user does not provide a number in the command line, the code will default t
 
 The output will display to the console in the following format:
 
+If a user gives n to be less than or equal to 2, the console will display:
+```txt
+Guest number too low, program has defaulted to 10 guests
+```
+
+If a user gives n to be greater than 20, the console will display:
+```txt
+Guest number too high, program has defaulted to 10 guests
+```
+
+If a user gives n to be in the range of (2, 20], the console will display:
+```txt
+You assigned <GuestNum> guests to the party
+```
+
+If a user does not assign n, the console will display:
+```txt
+Program has defaulted to 10 guests
+```
+
 If a guest gets called to the showroom, the console will display:
 ```txt
 Guest Number: <GuestNum> has been called to the showroom.
@@ -48,9 +68,9 @@ If all the guests visited the showroom, the console will display:
 All of the guests have visited the showroom!
 ```
 
-To time efficiency, the console will display:
+For time efficiency, the console will display:
 ```txt
-Party Took 166ms to finish
+Party Took <Time in ms>ms to finish
 ```
 
 ## Proof of Correctness
@@ -96,4 +116,5 @@ Trial 9 Run recorded at 39ms
 Trial 10 Run recorded at 42ms
 ```
 
-On avg at ```33.7ms``` is a reasonable time for each guest on one thread and only allowing one guest to enter the showroom on each permit. Which is a more efficent algorithm than the BirthdayParty algorithm. This is because of the enqueue and dequeue operations that take O(1) runtimes.
+On average at ```33.7ms``` is a reasonable time for each guest on one thread and only allowing one guest to enter the showroom on each permit. Which is a more efficient algorithm than the BirthdayParty algorithm. This is because of the enqueue and dequeue operations that take O(1) runtimes.
+
