@@ -74,7 +74,11 @@ Party Took <Time in ms>ms to finish
 ```
 
 ## Proof of Correctness
-This program utilizes the Java Semaphore lock class which will only allow 1 of the 10 guests to enter Minotaurs showroom at a time. When a guest enters the showroom, the Semaphore will acquire a permit and will release it only when a guest completes the cycle in the showroom.
+Pre condition: I must give credit where it is due: I referenced off of "Vibhav Saxena" github repo for solving the NPhilosiphers problem (Chapter 1 exercise 1) on how I would be able to solve this problem. Which sparked ideas to utilize ```implements Runnable``` on the Guest class and using ```Semaphore lock``` class when each guest enters the labyrinth.
+
+https://github.com/VibhavSaxena07/Dining-Philosophers-problem/blob/master/src/Nphilosphers.java
+
+That said, this program utilizes the Java Semaphore lock class which will only allow 1 of the 10 guests to enter Minotaurs showroom at a time. When a guest enters the showroom, the Semaphore will acquire a permit and will release it only when a guest completes the cycle in the showroom.
 
 ## Efficiency
 
