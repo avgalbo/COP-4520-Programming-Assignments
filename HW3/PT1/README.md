@@ -93,4 +93,4 @@ Trial 9 Run recorded at 5360ms
 Trial 10 Run recorded at 4947ms
 ```
 
-On average at ```5321.8ms``` is a reasonable time for each servant on one thread and only allowing one servant to write a thank you card.  
+On average at ```5321.8ms``` is a reasonable time for each servant on one thread and only allowing one servant to write a thank you card. Especially since we are testing 500,000 total presents.
