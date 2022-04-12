@@ -83,7 +83,7 @@ Before I display the results, This experiment was tested on an Macbook pro intel
 
 Results may differ on machines with different cores.
 
-I tested ten different test runs on the default 10 guests.
+I tested ten different test runs...
 
 ```txt
 Trial 1 Run recorded at 51ms
