@@ -260,7 +260,7 @@ public class BirthdayPresentsParty
 
   public static void main(String [] args) throws InterruptedException
   {
-    int servants = 4, totalPresents = 50;
+    int servants = 4, totalPresents = 500000;
     AtomicBoolean finished = new AtomicBoolean(false);
     int [] array = IntStream.rangeClosed(1, totalPresents).toArray();
     List<Integer> list = Arrays.stream(array).boxed().collect(Collectors.toList());
