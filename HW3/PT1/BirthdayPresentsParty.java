@@ -23,8 +23,8 @@ class GiftList
   Random r = new Random();
   Lock lock = new ReentrantLock();
   public AtomicInteger action = new AtomicInteger();
-	public AtomicInteger counter = new AtomicInteger(0);
-	public AtomicBoolean finished = new AtomicBoolean(false);
+  public AtomicInteger counter = new AtomicInteger(0);
+  public AtomicBoolean finished = new AtomicBoolean(false);
 
   // Utility method that returns a created node.
   public Node createNode(int data)
